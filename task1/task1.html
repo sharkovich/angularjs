@@ -1,0 +1,18 @@
+<div class="d-flex flex-column h-100 justify-content-center" ng-controller="task1Controller">
+    <form class="h-50 d-flex flex-column form-page">
+        <div class="form-group row">
+            <label class='col-md-3 col-form-label text-right'>Search Tax Symbols</label>
+            <div class='col-md-7'>
+                <input type="text" class="form-control" ng-model="symbol">
+            </div>
+            <input type='button' ng-click='searchTaxSymbols(symbol)' class='btn btn-primary' value='Search'>
+        </div>
+
+        <ul ng-if="symbols.length > 0" class="list-group">
+            <li class="list-group-item" ng-repeat="taxSymbol in symbols">{{taxSymbol.value}}</li>
+        </ul>
+        <ul ng-if="symbols.length == 0" class="list-group">
+            <li class="list-group-item">Tax Symbols undefined</li>
+        </ul>
+    </form>
+</div>

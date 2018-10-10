@@ -1,0 +1,21 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 90, 187);
+    height: 100%;
+    /* color: white; */
+}
+
+.nav-radius{
+    border-radius: 10px;
+}
+
+.form-page{
+    align-items: stretch;
+    justify-content: space-between;   
+    text-align: center; 
+}
+
+.table{
+    background: white;
+}

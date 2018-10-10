@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="_css/bootstrap-min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="#" type="image/x-icon">
+    <script src="_libs/angular.min.js"></script>
+    <script src="_libs/angular.route.min.js"></script>
+    <script src="_libs/jquery.min.js"></script>
+    <script src="_libs/bootstrap.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="col">
+                <div class="h-100 d-flex flex-column">
+                    <div class="">
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100 nav-radius">
+                            <a class="navbar-brand" href="https://bluemedia.pl/" target="blank">
+                                <img class="logo" src="_assets/blue-media.jpg" width="100" height="50" alt="Blue Media">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto" ng-controller="myAppController">
+                                    <li class="nav-item" ng-class="{ active: isActive('/task1') }">
+                                        <a class="nav-link" href="/task1">Task1</a>
+                                    </li>
+                                    <li class="nav-item" ng-class="{ active: isActive('/task2')}">
+                                        <a class="nav-link" href="/task2">Task2</a>
+                                    </li>
+                                    <li class="nav-item" ng-class="{ active: isActive( '/task3') }">
+                                        <a class="nav-link" href="/task3">Task3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="h-100">
+                        <div class="h-100" ng-view></div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="task1/task1.js"></script>
+    <script src="task2/task2.js"></script>
+    <script src="task3/task3.js"></script>
+
+</body>
+
+</html>

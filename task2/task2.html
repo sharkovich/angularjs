@@ -1,0 +1,15 @@
+<div class="d-flex flex-column h-100 justify-content-center align-items-center" ng-controller="task2Controller">
+    <form class="d-flex flex-column w-100">
+        <div class="form-group row">
+            <label class='col-md-2 col-form-label text-right'>Iban:</label>   
+            <div class='col-md-8' >
+                <input type='text' class='form-control' ng-model='ibanString' iban-valid iban="iban" ng-pattern="onlyNumbers" data-method="ibanValid"/>
+            </div>
+            <input type='button' ng-click='iban.validationIban(ibanString)' class='btn btn-primary' value='Submit'>
+            <div class="col-12 text-center">Iban valid:{{isValid}}</div>
+
+        </div>
+
+    </form>
+
+</div>

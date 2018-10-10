@@ -1,0 +1,20 @@
+<table class="table" ng-controller="task3Controller">
+    <thead>
+      <tr>
+        <th scope="col">Odbiorca</th>
+        <th scope="col">Tytuł przelewu</th>
+        <th scope="col" ng-click="sortBy('amount')">Kwota</th>
+        <th scope="col">Waluta</th>
+        <th scope="col" ng-click="sortBy('fullDay')">Data modyfikacji</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="bankTransfer in dataBankTransfers | orderBy:propertyName:reverse">
+        <td>{{bankTransfer.beneficiary.name1}}</td>
+        <td>{{bankTransfer.transactionData.description}}</td>
+        <td>{{bankTransfer.transactionData.amount}}</td>
+        <td>{{bankTransfer.transactionData.currencyCode}}</td>
+        <td>{{bankTransfer.modificationTime.fullDay}}</td>   
+      </tr>
+    </tbody>
+  </table>
