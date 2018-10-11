@@ -5,14 +5,15 @@
             <div class='col-md-7'>
                 <input type="text" class="form-control" ng-model="symbol">
             </div>
-            <input type='button' ng-click='searchTaxSymbols(symbol)' class='btn btn-primary' value='Search'>
+            <input type='button' ng-click='onSearchBtnClick(symbol)' class='btn btn-primary' value='Search'>
         </div>
 
-        <ul ng-if="symbols.length > 0" class="list-group">
+        <!--tutaj tak samo jak w kontrolerze jeżeli chodzi o operatory porównania-->
+        <ul ng-if="symbols.length >= 0" class="list-group">
             <li class="list-group-item" ng-repeat="taxSymbol in symbols">{{taxSymbol.value}}</li>
         </ul>
-        <ul ng-if="symbols.length == 0" class="list-group">
-            <li class="list-group-item">Tax Symbols undefined</li>
+        <ul ng-if="symbols.length === 0" class="list-group">
+            <li class="list-group-item">Tax Symbols {{symbols}}</li>
         </ul>
     </form>
 </div>

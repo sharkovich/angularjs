@@ -1,5 +1,5 @@
 angular.module('myApp')
-
+// nie mam większych zastrzeżeń :)
     .controller('task3Controller', function ($scope, $http) {
         $http({
             method: "GET",
